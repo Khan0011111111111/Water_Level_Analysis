@@ -81,7 +81,7 @@ def main():
                     recovery_subset = cycle_data[cycle_data['Level above Pump'] >= recovery_level]
                     
                     # 90% Recovery Time Calculation
-                    time_to_90_recovery = (recovery_subset['Timestamp'].iloc[0] - min_time).total_seconds() / 3600 \
+                    time_to_90_recovery = -1* (recovery_subset['Timestamp'].iloc[0] - min_time).total_seconds() / 3600 \
                         if not recovery_subset.empty else np.nan
 
                     # Additional Metrics
