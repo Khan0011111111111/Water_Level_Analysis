@@ -43,7 +43,7 @@ def main():
                 levels = df['Level above Pump'].values
                 
                 # Peak Detection
-                peaks, _ = find_peaks(levels, prominence=5)
+                peaks, _ = find_peaks(levels, prominence=0)
                 df['is_peak'] = False
                 df.loc[peaks, 'is_peak'] = True
 
